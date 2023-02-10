@@ -18,6 +18,8 @@ export const Formulario = () => {
         <Cadastro label="Nome" tipo="text" placeholder="Digite o nome" />
         <Cadastro label="Data de Nascimento" tipo="date" />
         <Cadastro label="Renda" tipo="number" placeholder="Digite a renda" />
+        <Cadastro label="Jutifique" tipo="text" placeholder="Justifique por que renda menor que salário mínimo" />
+
 
         <Botao texto={"Salvar"} type={"submit"}></Botao>
         {/* <Button variant="primary">Salvar</Button> */}

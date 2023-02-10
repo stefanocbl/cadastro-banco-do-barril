@@ -10,6 +10,7 @@ export const Tabela = () => {
           <th>Nome</th>
           <th>Data de Nascimento</th>
           <th>Renda</th>
+          <th>Justificativa</th>
         </tr>
       </thead>
       <tbody>

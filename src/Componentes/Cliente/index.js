@@ -7,6 +7,7 @@ export const Cliente = () => {
         <td>{"Bruce Weyne"}</td>
         <td>{"01-06-1981"}</td>
         <td>{"R$120.000"}</td>
+        <td>{}</td>
       </tr>
   );
 };
