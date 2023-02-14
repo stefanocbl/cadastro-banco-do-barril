@@ -4,29 +4,23 @@ import "./Formulario.css";
 import { useState } from "react";
 // import { Button } from "react-bootstrap";
 
-export const Formulario = () => {
+export const Formulario = ({ aoClienteCadastrado }) => {
   const [cpf, setCpf] = useState("00012345678");
   const [nome, setNome] = useState("Stefano");
   const [nascimento, setNascimento] = useState("");
   const [renda, setRenda] = useState("2000");
   const [justificativa, setJustificativa] = useState("Não há");
 
-  const handleData = (evento) => {
-    setCpf(evento.target.value);
-  };
-
   const handleSubmit = (evento) => {
     evento.preventDefault();
 
-    const dadosCliente = {
+    aoClienteCadastrado({
       cpf,
       nome,
       nascimento,
       renda,
       justificativa,
-    };
-
-    console.log(dadosCliente);
+    })
   };
 
   return (
@@ -38,27 +32,27 @@ export const Formulario = () => {
           tipo="number"
           placeholder="Digite o CPF"
           valor={cpf}
-          valorIput={evento => setCpf(evento.target.value)}
+          valorIput={(evento) => setCpf(evento.target.value)}
         />
         <Cadastro
           label="Nome"
           tipo="text"
           placeholder="Digite o nome"
           valor={nome}
-          valorIput={evento => setNome(evento.target.value)}
+          valorIput={(evento) => setNome(evento.target.value)}
         />
-        <Cadastro 
-        label="Data de Nascimento" 
-        tipo="date"
-        valor={nascimento}
-        valorIput={evento => setNascimento(evento.target.value)}
+        <Cadastro
+          label="Data de Nascimento"
+          tipo="date"
+          valor={nascimento}
+          valorIput={(evento) => setNascimento(evento.target.value)}
         />
         <Cadastro
           label="Renda"
           tipo="number"
           placeholder="Digite a renda"
           valor={renda}
-          valorIput={evento => setRenda(evento.target.value)}
+          valorIput={(evento) => setRenda(evento.target.value)}
         />
         {
           <Cadastro
@@ -66,7 +60,7 @@ export const Formulario = () => {
             tipo="text"
             placeholder="Justificativa de renda"
             valor={justificativa}
-            valorIput={evento => setJustificativa(evento.target.value)}
+            valorIput={(evento) => setJustificativa(evento.target.value)}
           />
         }
         <Botao
@@ -74,7 +68,6 @@ export const Formulario = () => {
           tipo={"submit"}
           aoSubmeter={handleSubmit}
         ></Botao>
-        {/* <Button variant="primary">Salvar</Button> */}
       </form>
     </section>
   );
