@@ -7,8 +7,13 @@ table {
   }
   
   td, th {
+<<<<<<< HEAD
+    border: 1px solid #000000;
+    text-align: center;
+=======
     border: 1px solid #dddddd;
     text-align: left;
+>>>>>>> add43242bf7b2c770c7ac8d355f7789b9699f0f5
     padding: 8px;
   }
   
