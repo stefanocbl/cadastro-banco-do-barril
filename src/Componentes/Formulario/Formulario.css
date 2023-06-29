@@ -2,10 +2,15 @@
     display:flexbox;
     justify-content: center;
     margin: 5vh 30vh;
+    
 
 }
 .formulario-container .formulario {
-    max-width: 100%;
+    min-width: 100px;
+    /* max-width: 200px;
+    max-height: 150px; */
+    width: auto;
+    height: auto;
     background: #F7F7F7;
     box-shadow: 7px 7px 15px rgba(0, 0, 0, 0.08);
     border-radius: 20px;

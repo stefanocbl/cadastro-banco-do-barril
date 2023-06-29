@@ -5,7 +5,7 @@ export const Banner = () => {
     <header className="cabecalho">
       <div className="banner">
         <p>Cadastro Clientes</p>
-        <img src="./imagens/logo-bbrasil.png" alt="logo bb"/>
+        <img src="./imagens/Bbarril.png" alt="logo bb"/>
       </div>
     </header>
   );
