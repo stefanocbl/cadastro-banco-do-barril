@@ -6,7 +6,7 @@
 
 }
 .formulario-container .formulario {
-    min-width: 100px;
+    min-width: max-content;
     /* max-width: 200px;
     max-height: 150px; */
     width: auto;
